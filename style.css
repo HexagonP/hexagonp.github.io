@@ -1,0 +1,106 @@
+body {
+  background-color: ghostwhite;
+  font-family: monospace,Arial;
+}
+
+@keyframes appears {
+  0% {bottom: 100%;}
+  100% {bottom: -12px;}
+}
+
+@keyframes disappears {
+  0% {bottom: -12px;}
+  100% {bottom: 100%;}
+}
+
+.navigator {
+  background-color: black;
+  color: white;
+  border-style: solid;
+
+  width: calc(40% + 200px);
+  margin: auto;
+  padding: 12px;
+  position: relative;
+  z-index: 100;
+}
+
+.hidden {
+  display: none;
+}
+
+#mainthing {
+  width: calc(40% + 200px);
+  margin: auto;
+  z-index: 0;
+
+  position: relative;
+}
+
+.container {
+  background-color: white;
+  border-style: solid;
+  padding: 24px;
+  margin: 12px;
+  box-shadow: 2px 2px gray;
+  border-radius: 5px;
+}
+
+.container a {
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 8px;
+
+  display: inline-flex;
+  border-radius: 5px;
+  border-style: solid;
+
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+}
+
+.container a:hover {
+  box-shadow: 2px 2px gray;
+  bottom: 2px;
+  right: 2px;
+}
+
+.container a:active {
+  box-shadow: none;
+  top: 1px;
+  left: 1px;
+}
+
+.container a img {
+  position: relative;
+  right: 2px;
+}
+
+.appears {
+  bottom: -12px;
+  animation-name: appears;
+  animation-duration: 0.4s;
+}
+
+.dies {
+  bottom: 100%;
+  animation-name: disappears;
+  animation-duration: 0.4s;
+}
+
+t {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}

@@ -18,11 +18,9 @@ body {
   color: white;
   border-style: solid;
 
-  width: calc(40% + 200px);
+  width: calc(35% + 200px);
   margin: auto;
   padding: 12px;
-  position: relative;
-  z-index: 100;
 }
 
 .hidden {
@@ -30,10 +28,9 @@ body {
 }
 
 #mainthing {
-  width: calc(40% + 200px);
+  width: calc(35% + 240px);
   margin: auto;
   z-index: 0;
-
   position: relative;
 }
 

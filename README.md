@@ -1,2 +1,2 @@
 # hexagonp.github.io
-it's just a website
+it is a website

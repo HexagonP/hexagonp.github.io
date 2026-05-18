@@ -1,3 +1,11 @@
+@keyframes appears {
+  0% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -12px;
+  }
+}
 body {
   background: ghostwhite;
   color: #000000;
@@ -20,15 +28,19 @@ body p {
   background-color: black;
   color: white;
   border-style: solid;
-  width: calc(40% + 200px);
+  width: calc(35% + 200px);
   margin: auto;
   padding: 12px;
 }
 
 .bounds {
-  width: calc(40% + 240px);
+  width: calc(35% + 240px);
   margin: auto;
   z-index: 0;
+  animation-name: appears;
+  animation-duration: 0.3s;
+  bottom: -12px;
+  position: relative;
 }
 
 .container {

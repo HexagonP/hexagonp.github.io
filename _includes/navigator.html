@@ -1,21 +1,32 @@
 <div class="navigator">
     <t>HexagonP</t>
-    <div class="button_type_b">
+    {% if page.title != "404" %}
+        <div class="button_type_b">
 
-        <a href="/posts">
-            <img src="assets/icons/navbar_posts.png">
-            <span>posts</span>
-        </a>
+            <a href="/posts/">
+                <img src="/assets/icons/navbar_posts.png">
+                <span>posts</span>
+            </a>
 
-        <a href="/games">
-            <img src="assets/icons/navbar_games.png">
-            <span>games</span>
-        </a>
+            <a href="/games/">
+                <img src="/assets/icons/navbar_games.png">
+               <span>games</span>
+            </a>
 
-        <a href="/">
-            <img src="assets/icons/navbar_home.png">
-            <span>home</span>
-        </a>
+            <a href="/">
+               <img src="/assets/icons/navbar_home.png">
+                <span>home</span>
+            </a>
 
-    </div>
+        </div>
+    {% else %}
+        <div class="button_type_b">
+
+            <a href="/">
+               <img src="/assets/icons/navbar_home.png">
+                <span>home</span>
+            </a>
+
+        </div>
+    {% endif %}
 </div>

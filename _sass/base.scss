@@ -1,27 +1,25 @@
-$containerColor: white;
-$textColor: black;
-$linkColor: #009c60;
-$linkColorDarker: #006d43;
-
-$backgroundColor: ghostwhite;
-$bodyColor: #000000;
-$bodyFont: Roboto Mono,monospace,Arial;
+@use "palette";
+@use "gamestore";
 
 @keyframes appears {
-  0% {bottom: 12px;}
-  100% {bottom: 0px;}
+  0% {top: 0px;}
+  100% {top: 12px;}
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background: $backgroundColor;
-    color: $bodyColor;
-    font-family: $bodyFont;
+    background: palette.$backgroundColor;
+    color: palette.$bodyColor;
+    font-family: Roboto Mono,monospace,Arial;
 
     t { font-size: 24px; }
     h1 { font-size: 24px; }
     h2 { font-size: 20px; }
     p { font-size: 16px; }
-    a { font-family: inherit; font-size: inherit; color: $linkColor; }
+    a { font-family: inherit; font-size: inherit; color: palette.$linkColor; }
 }
 
 .navigator {
@@ -29,7 +27,7 @@ body {
     color: white;
     border-style: solid;
 
-    width: calc(35% + 240px);
+    width: calc(40% + 246px);
     margin: auto;
     padding: 12px;
 
@@ -43,23 +41,23 @@ body {
 }
 
 .bounds {
-    width: calc(35% + 240px);
+    width: calc(40% + 240px);
     margin: auto;
     z-index: 0;
 
     animation-name: appears;
     animation-duration: 0.3s;
-    bottom: 0px;
+    top: 12px;
     position: relative;
 }
 
 .container {
-    background-color: $containerColor;
+    background-color: palette.$containerColor;
     border-style: solid;
     padding: 24px;
-    margin-top: 12px;
     box-shadow: 2px 2px gray;
     border-radius: 5px;
+    overflow: hidden;
 
     hr {
         border: 3px lightgray;
@@ -83,7 +81,7 @@ body {
         margin: 4px 0px 4px 0px;
         padding: 8px;
 
-        display: inline-flex;
+        display: flex;
         border-radius: 5px;
         border-style: solid;
         position: relative;
@@ -102,7 +100,7 @@ body {
 
         & span {
             position: relative;
-            margin-left: 8px;
+            margin-left: 4px;
         }
     }
 }
@@ -114,24 +112,25 @@ body {
         background-color: black;
         text-decoration: none;
         vertical-align: middle;
-        font-size: 16px;
         padding: 4px 8px 4px 8px;
 
         display: inline-flex;
+        align-items: center;
         position: relative;
 
         &:hover {
-            background-color: $linkColor;
+            background-color: palette.$linkColor;
         }
 
         &:active {
-            background-color: $linkColorDarker;
+            background-color: palette.$linkColorDarker;
             top: 2px;
         }
 
         & span {
             position: relative;
             margin-left: 4px;
+            font-size: 12px;
         }
     }
 }
@@ -139,12 +138,12 @@ body {
 /* mobile shenanigans */
 @media screen and (max-width: 420px) {
   .bounds {
-    width: calc(100% - 8px);
+    width: calc(100%);
   }
   
   .navigator {
     /* 12px navbar padding + 8px body margin*/
-    width: calc(100% - 32px);
+    width: calc(100%);
   }
 
   .button_type_b {

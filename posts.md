@@ -36,4 +36,4 @@ int main() {
 }
 ```
 
-![fobby](assets/fobby.png)
+![fobby](/assets/fobby.png)

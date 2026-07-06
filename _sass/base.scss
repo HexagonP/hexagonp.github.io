@@ -1,5 +1,6 @@
 @use "palette";
 @use "gamestore";
+@use "postboard";
 
 @keyframes appears {
   0% {top: 0px;}
@@ -20,6 +21,13 @@ body {
     h2 { font-size: 20px; }
     p { font-size: 16px; }
     a { font-family: inherit; font-size: inherit; color: palette.$linkColor; }
+
+    ul { padding-inline-start: 32px; }
+    blockquote {
+        margin-inline-start: 24px;
+        padding-left: 12px;
+        border-left: lightgrey dashed;
+    }
 }
 
 .navigator {
@@ -71,6 +79,15 @@ body {
     }
 }
 
+.footer {
+    text-align: center;
+
+    margin-top: 64px;
+    margin-bottom: 64px;
+
+    color: gray;
+}
+
 .button_type_a {
     display: inline-flex;
     a {
@@ -100,7 +117,7 @@ body {
 
         & span {
             position: relative;
-            margin-left: 4px;
+            margin-left: 8px;
         }
     }
 }

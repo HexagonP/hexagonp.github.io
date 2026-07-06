@@ -1,0 +1,17 @@
+---
+layout: base
+---
+
+<div class="bounds">
+    <div class="container">
+        <h1 style="font-size: 32px;">{{ page.title }}</h1>
+        <p>
+            Posted on 
+            {{ page.date | date: "%02d/%02m/%Y"}}
+            {% include calendar_icon.html date=page.date alt=true %}
+        </p>
+        <hr>
+        <div class="post_contents">{{ content }}</div>
+        <hr>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+{% assign month = include.date | date: "%-m" %}
+{% assign filesuffix = '.png' %}
+
+{% if include.alt %}
+{% assign filesuffix = '_alt.png' %}
+{% endif %}
+
+{% case month %}
+{% when '1' or '2' or '3' %}<img src="/assets/icons/calendar_spr{{ filesuffix }}">
+{% when '4' or '5' or '6' %}<img src="/assets/icons/calendar_sumr{{ filesuffix }}">
+{% when '7' or '8' or '9' %}<img src="/assets/icons/calendar_autm{{ filesuffix }}">
+{% when '10' or '11' or '12' %}<img src="/assets/icons/calendar_wntr{{ filesuffix }}">
+{% endcase %}

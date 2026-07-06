@@ -1,0 +1,12 @@
+<div class="calendar">
+    <div class="calendar_top">
+        {% include calendar_icon.html date=include.date %}
+        <p>{{ include.date | date: "%^b"}}</p>
+    </div>
+    <p style="font-size: 24px; margin-top: 3px; font-weight: bold;">
+        {{ include.date | date: "%02d" }}
+    </p>
+    <p style="font-size: 12px; margin-top: 8px; color: gray;">
+        {{ include.date | date: "%Y" }}
+    </p>
+</div>

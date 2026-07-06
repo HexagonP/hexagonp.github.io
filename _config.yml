@@ -3,3 +3,13 @@ baseurl: "" # the subpath of your site, e.g. /blog
 title: "HexagonP" # the name of your site, e.g. ACME Corp.
 
 permalink: "/:categories/:title/"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      category: none
+      permalink: "/post/:title"

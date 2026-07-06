@@ -1,0 +1,9 @@
+<div class="post_card">
+    <a href="{{ include.url }}">
+        {% include calendar.html date=include.date %}
+        <div class="post_card_contents">
+            <h2>{{ include.title }}</h2>
+            <p>{{ include.excerpt }}</p>
+        </div>
+    </a>
+</div>

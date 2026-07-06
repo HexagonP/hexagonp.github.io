@@ -3,37 +3,14 @@ layout: default
 title: "posts"
 ---
 
-## BLOG PAGE IS UNDER CONSTRUCTION
-in the meantime you can.. 
+<h1 style="text-align: center;"> Post Board </h1>
 
-
-well, i don't have anything else so have this markdown test
-
-# header 1
-## header 2
-### header 3
 ___
-**bold** *italic* ~~strike~~ wait where's underline
 
-> quote
->> greater quote
->>> greatest quote
+<div class="post_board">
+    {% for post in site.posts %}
+        {% include postcard.html title=post.title excerpt=post.excerpt date=post.date url=post.url %}
+    {% endfor %}
+</div>
 
-- list
-  - deeper list
-    - even deeper list
-- still list
-
-1. live
-2. laugh
-3. love
-
-```
-#include <stdio.h>
-
-int main() {
-    return 1 / 0;
-}
-```
-
-![fobby](/assets/fobby.png)
+___

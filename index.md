@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "home"
+excerpt: "page of a fox"
 ---
 
 <img style="float: right;" alt="fob" src="/assets/images/fob.png">
-## UNDER CONSTRUCTION
+## WELCOME
 this website is still being worked on, but in the meantime you can check these out:
 
 {% include button_a.html icon="/assets/icons/like.png" text="games i like" url="https://hexagonp2.carrd.co" %}

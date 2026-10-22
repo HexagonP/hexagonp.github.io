@@ -30,7 +30,8 @@ body {
     }
 
     background-image: url("/assets/bg_notepad.gif");
-    background-size: 128px;
+    background-size: 200px;
+    background-attachment: fixed;
 }
 
 .navigator {
@@ -66,6 +67,7 @@ body {
     background-color: palette.$containerColor;
     border-style: solid;
     padding: 24px;
+    margin-bottom: 24px;
     box-shadow: 2px 2px gray;
     border-radius: 5px;
     overflow: hidden;
